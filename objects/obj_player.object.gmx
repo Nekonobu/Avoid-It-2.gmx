@@ -57,7 +57,7 @@ Yspeed = 0;
             <string>global.key_left = keyboard_check(ord('A'));
 global.key_right = keyboard_check(ord('D'));
 global.key_down = keyboard_check(ord('S'));
-global.key_up = keyboard_check(ord('w'));
+global.key_up = keyboard_check(ord('W'));
 
 //global.key_up = 1
 //key input
