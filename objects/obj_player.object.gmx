@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>//variebels
-global.fric = 0.5;
+global.fricMult = 10;
 global.max_speed = 10;
 global.acce = 5;
 Xspeed = 0;
@@ -59,6 +59,8 @@ key_right = keyboard_check(ord('D'));
 key_down = keyboard_check(ord('S'));
 key_up = keyboard_check(ord('w'));
 
+
+//key input
 if key_left = 1 {
     Xspeed -= global.acce;
 }
@@ -75,7 +77,28 @@ if key_up = 1 {
     Yspeed = Yspeed + global.acce;
 }
 
+
+//x direction - friction plus restrictions
 if Xspeed &gt;= global.max_speed {
+    Xspeed = global.max_speed;
+}
+
+if Xspeed &lt;= -(global.max_speed) {
+    Xspeed = -(global.max_speed);
+}
+
+if Xspeed &lt; 0 {
+    Xspeed += (Xspeed/global.fricMult);
+}
+
+if Xspeed &gt; 0 {
+    Xspeed -= (Xspeed/global.fricMult;
+}
+
+
+
+//y direction - friction plus restrictions
+/*if Xspeed &gt;= global.max_speed {
     Xspeed = global.max_speed;
 }
 
@@ -89,11 +112,10 @@ if Xspeed &lt; 0 {
 
 if Xspeed &gt; 0 {
     Xspeed -= global.fric;
-}
-
+}*/
 
 x += Xspeed
-
+//y += Yspeed
 </string>
           </argument>
         </arguments>
