@@ -26,9 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>//variebels
-global.fric = 5;
+global.fric = 0.5;
 global.max_speed = 10;
-global.acce = 2;
+global.acce = 5;
 Xspeed = 0;
 Yspeed = 0;
 
@@ -58,7 +58,6 @@ Yspeed = 0;
 key_right = keyboard_check(ord('D'));
 key_down = keyboard_check(ord('S'));
 key_up = keyboard_check(ord('w'));
-Xspeed = 0
 
 if key_left = 1 {
     Xspeed -= global.acce;
@@ -94,6 +93,7 @@ if Xspeed &gt; 0 {
 
 
 x += Xspeed
+
 </string>
           </argument>
         </arguments>
